@@ -1,0 +1,48 @@
+@use "./utilities/reset";
+@use "./utilities/mixins" as mixins;
+
+:root {
+	--slate-300: hsl(212, 45%, 89%);
+	--slate-500: hsl(216, 15%, 48%);
+	--slate-900: hsl(218, 44%, 22%);
+	--white: hsl(0, 0%, 100%);
+}
+
+body {
+	display: grid;
+	place-content: center;
+	min-height: 100vh;
+	padding: 0.5em;
+	font-family: "Outfit", sans-serif;
+	font-size: 15px;
+	background-color: var(--slate-300);
+}
+
+.card {
+	max-width: 300px;
+	padding: 1em;
+	background-color: var(--white);
+	border-radius: 8px;
+	text-align: center;
+
+	&__top {
+		&-img {
+			width: 100%;
+			border-radius: 8px;
+		}
+	}
+&__bottom {
+	margin: 1em;
+	&-title {
+		margin-bottom: 1em;
+		font-weight: 700;
+		font-size: 2rem;
+		color: var(--slate-900);
+	}
+	&-text {
+		margin-bottom: 0.5em;
+		font-size: 1.5rem;
+		color: var(--slate-500);
+	}
+}
+}
